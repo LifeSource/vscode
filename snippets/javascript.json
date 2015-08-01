@@ -1,0 +1,248 @@
+{
+/*
+	 // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	// -------------------------------------------
+	// Essential JavaScript Snippets 
+	// -------------------------------------------
+	
+	"Named object literal": {
+		"prefix": "vobj",
+		"body": [
+			"var $1 = {",
+			"	${2} : ${3}",
+			"};"
+		],
+		"description": "Create an anonymous function."
+	},
+	
+	"Anonymous Function": {
+		"prefix": "fn",
+		"body": [
+			"function ($1) {",
+			"	$2",
+			"}"
+		],
+		"description": "Create an anonymous function."
+	},
+	
+	"Named Function": {
+		"prefix": "fne",
+		"body": [
+			"var $1 = function ($2) {",
+			"	$3",
+			"};"
+		],
+		"description": "Create a named function."
+	},
+	
+	"IIFE": {
+		"prefix": "iife",
+		"body": [
+			"(function() {",
+			"	\"use strict\";",
+			"	$1",
+			"}());"		
+		],
+		"description": "Create an Immediately Invoked Function Expression."
+	},
+	
+	// -------------------------------------------	
+	// NodeJS and Build specific Snippets
+	// -------------------------------------------	
+	
+	"Required Module": {
+		"prefix": "req",
+		"body": [
+			"var $1 = require(\"$2\")$3"
+		],
+		"description": "Use for module requiring."	
+	},
+	
+	"Module Exports": {
+		"prefix": "mde",
+		"body": [
+			"module.exports = function () {",
+			"	$1",
+			"};"
+		],
+		"description": "Node module export"
+		
+	},
+	
+	"Express Middleware Usage": {
+		"prefix": "xpu",
+		"body": [
+			"app.use($1);"
+		],
+		"description": "Set express middleware using app.use() method."	
+	},
+	
+	"HTTP Handler Function": {
+		"prefix": "hfn",
+		"body": [
+			"function (req, res) {\n",
+			"	$1",
+			"}$2"
+		],
+		"description": "Create a middleware function."	
+	},
+	
+	"Middleware Function": {
+		"prefix": "mfn",
+		"body": [
+			"function (req, res, next) {\n",
+			"	$1",
+			"}$2"
+		],
+		"description": "Create a middleware function."	
+	},
+	
+	"Gulp Task": {
+		"prefix": "glt",
+		"body": [
+			"gulp.task(\"$1\", function($2) {",
+			"	$3",
+			"});"
+		],
+		"description": "Create a simple gulp task without dependencies."	
+	},
+	
+	"Gulp Task with Depdendencies": {
+		"prefix": "gld",
+		"body": [
+			"gulp.task(\"$1\", [\"$2\"], function($3) {",
+			"	$4",
+			"});"
+		],
+		"description": "Create a simple gulp task with dependencies."	
+	},
+	
+	// -------------------------------------------	
+	// Angular Specific Snippets
+	// -------------------------------------------
+
+	"Angular Module Creation": {
+		"prefix": "amod",
+		"body": [
+			"(function() {",
+			"	\"use strict\";",
+			"	angular.module(\"$1\", [$2])",
+			"	$3",
+			"}());"		
+		],
+		"description": "Create an Angular Module using an IIFE."
+	},
+	
+	"Angular Controller Creation": {
+		"prefix": "actrl",
+		"body": [
+			"(function() {",
+			"	\"use strict\";\n",
+			"	angular",
+			"		.module(\"$1\")",
+			"		.controller(\"$2\", $2)\n",
+			"	$2.$inject = [\"$3\"];\n",
+			"	function $2($3) {\n",
+			"		$4",
+			"	}",
+			"}());"		
+		],
+		"description": "Create an Angular Controller using an IIFE."
+	},
+	
+	"Angular Directive Creation": {
+		"prefix": "adir",
+		"body": [
+			"(function() {",
+			"	\"use strict\";\n",
+			"	angular",
+			"		.module(\"$1\")",
+			"		.directive(\"$2\", $2);\n",
+			"	$2.$inject = [\"$3\"];\n",
+			"	function $2($3) {\n",
+			"		var directive = {",
+			"			$4",	
+			"		};\n",
+			"		return directive;",
+			"	}",
+			"}());"		
+		],
+		"description": "Create an Angular directive using an IIFE."
+	},
+	
+	"Angular Service Creation": {
+		"prefix": "aserv",
+		"body": [
+			"(function() {",
+			"	\"use strict\";\n",
+			"	angular",
+			"		.module(\"$1\")",
+			"		.factory(\"$2\", $2);\n",
+			"	$2.$inject = [\"$3\"];\n",
+			"	function $2($3) {\n",
+			"		var service = {",
+			"			$4",	
+			"		};\n",
+			"		return service;",
+			"	}",
+			"}());"		
+		],
+		"description": "Create an Angular Service."
+	},
+	
+	// -------------------------------------------
+	// Unit testing - BDD
+	// -------------------------------------------
+	
+	"describe block": {
+		"prefix": "desc",
+		"body": [
+			"describe(\"$1\", function($2) {",
+			"	$3",
+			"});"
+		],
+		"description": "Create a describe block."
+	},
+	
+	"it block": {
+		"prefix": "it",
+		"body": [
+			"it(\"$1\", function($2) {",
+			"	$3",
+			"});"
+		],
+		"description": "Create an it block."
+	},
+	
+	"beforeEach block": {
+		"prefix": "bef",
+		"body": [
+			"beforeEach(function($1) {",
+			"	$2",
+			"});"
+		],
+		"description": "Create a beforeEach block"
+	},
+	
+	"afterEach block": {
+		"prefix": "aft",
+		"body": [
+			"afterEach(function($1) {",
+			"	$2",
+			"});"
+		],
+		"description": "Create an afterEach block."
+	}
+}
