@@ -65,7 +65,7 @@
 	"Required Module": {
 		"prefix": "req",
 		"body": [
-			"var $1 = require(\"$2\")$3"
+			"var $1 = require(\"$1\")$2"
 		],
 		"description": "Use for module requiring."	
 	},
@@ -78,7 +78,6 @@
 			"};"
 		],
 		"description": "Node module export"
-		
 	},
 	
 	"Express Middleware Usage": {
@@ -182,6 +181,26 @@
 		"description": "Create an Angular directive using an IIFE."
 	},
 	
+	"Angular Service Creation Using Provider": {
+		"prefix": "aprov",
+		"body": [
+			"(function() {",
+			"	\"use strict\";\n",
+			"	angular",
+			"		.module(\"$1\")",
+			"		.provider(\"$2\", $2);\n",
+			"	$2.$inject = [\"$3\"];\n",
+			"	function $2($3) {\n",
+			"		var service = {",
+			"			$4",	
+			"		};\n",
+			"		return service;",
+			"	}",
+			"})();"		
+		],
+		"description": "Create an Angular service using provider method."
+	},
+	
 	"Angular Service Creation": {
 		"prefix": "aserv",
 		"body": [
@@ -199,7 +218,47 @@
 			"	}",
 			"})();"		
 		],
-		"description": "Create an Angular Service."
+		"description": "Create an Angular service using factory."
+	},
+	
+	"Angular Constant Service Creation": {
+		"prefix": "aconst",
+		"body": [
+			"(function() {",
+			"	\"use strict\";\n",
+			"	angular",
+			"		.module(\"$1\")",
+			"		.constant(\"$2\", $2);\n",
+			"	$2.$inject = [\"$3\"];\n",
+			"	function $2($3) {\n",
+			"		var service = {",
+			"			$4",	
+			"		};\n",
+			"		return service;",
+			"	}",
+			"})();"		
+		],
+		"description": "Create an Angular service using constants method."
+	},
+	
+	"Angular Value Service Creation": {
+		"prefix": "avalu",
+		"body": [
+			"(function() {",
+			"	\"use strict\";\n",
+			"	angular",
+			"		.module(\"$1\")",
+			"		.constant(\"$2\", $2);\n",
+			"	$2.$inject = [\"$3\"];\n",
+			"	function $2($3) {\n",
+			"		var service = {",
+			"			$4",	
+			"		};\n",
+			"		return service;",
+			"	}",
+			"})();"		
+		],
+		"description": "Create an Angular service using Value method."
 	},
 	
 	// -------------------------------------------
