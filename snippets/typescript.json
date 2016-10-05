@@ -13,6 +13,14 @@
 		"description": "Log output to console"
 	}
 */
+/* Variable declaration and imports */
+"Import statement": {
+		"prefix": "vimp",
+		"body": [
+			"import $1 from $2"
+		],
+		"description": "An object literal"
+	},
 	"Object literal": {
 		"prefix": "vobj",
 		"body": [
@@ -20,7 +28,7 @@
 			"  $2:$3",
 			"}"
 		],
-		"description": "A let that lets you assign an initial value"
+		"description": "An object literal"
 	},
 	"Annotated Let": {
 		"prefix": "vlet",
@@ -36,7 +44,19 @@
 		],
 		"description": "A const that lets you assign an initial value"
 	},
-		"For-of loop": {
+	/* Conditionals and loops */
+	"If else": {
+		"prefix": "ife",
+		"body": [
+			"if ($1) {",
+			"  $2",
+			"} else {",
+			"  $3",
+			"}"
+		],
+		"description": "A standard if else statement"
+	},
+	"For-of loop": {
 		"prefix": "fof",
 		"body": [
 			"for (let $1 of $2) {",
@@ -63,7 +83,7 @@
 		"description": "A basic JavaScript function"
 	},
 		"function with closing bracket": {
-		"prefix": "cf",
+		"prefix": "fc",
 		"body": [
 			"function ${1:function_name}(${2:parameters}) {",
 			"  $3",
@@ -74,18 +94,16 @@
 		"Anonymous function": {
 		"prefix": "fn",
 		"body": [
-			"function $1($2) {",
-			"  $3",
+			"function $1($2)$3 {",
+			"  $4",
 			"}"
 		],
 		"description": "An anonymous JavaScript function"
 	},
 	"Arrow function": {
-		"prefix": "lf",
+		"prefix": "fl",
 		"body": [
-			"(${1:parameters}) => {",
-			"  $2",
-			"}"
+			"($1) => $2"
 		],
 		"description": "A multi-line arrow function"
 	},
