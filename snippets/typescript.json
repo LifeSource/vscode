@@ -1,0 +1,102 @@
+{
+/*
+	 // Place your snippets for TypeScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	"Object literal": {
+		"prefix": "vobj",
+		"body": [
+			"let $1 = {",
+			"  $2:$3",
+			"}"
+		],
+		"description": "A let that lets you assign an initial value"
+	},
+	"Annotated Let": {
+		"prefix": "vlet",
+		"body": [
+			"let $1 = $2"
+		],
+		"description": "A let that lets you assign an initial value"
+	},
+	"Annotated const": {
+		"prefix": "cst",
+		"body": [
+			"const $1 = $2"
+		],
+		"description": "A const that lets you assign an initial value"
+	},
+		"For-of loop": {
+		"prefix": "fof",
+		"body": [
+			"for (let $1 of $2) {",
+			"  $3",
+			"}"
+		],
+		"description": "A for of loop"
+	},
+	"Log to console": {
+		"prefix": "clg",
+		"body": [
+			"console.log($1);",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"Named function": {
+		"prefix": "nf",
+		"body": [
+			"function ${1:function_name}(${2:parameters}) {",
+			"  $3",
+			"}"
+		],
+		"description": "A basic JavaScript function"
+	},
+		"function with closing bracket": {
+		"prefix": "cf",
+		"body": [
+			"function ${1:function_name}(${2:parameters}) {",
+			"  $3",
+			"})"
+		],
+		"description": "A basic JavaScript function that closes the bracket"
+	},
+		"Anonymous function": {
+		"prefix": "fn",
+		"body": [
+			"function $1($2) {",
+			"  $3",
+			"}"
+		],
+		"description": "An anonymous JavaScript function"
+	},
+	"Arrow function": {
+		"prefix": "lf",
+		"body": [
+			"(${1:parameters}) => {",
+			"  $2",
+			"}"
+		],
+		"description": "A multi-line arrow function"
+	},
+		"Class": {
+		"prefix": "cls",
+		"body": [
+			"class ${1:clasName} {",
+			"  constructor() {$2}",
+			"  $3",
+			"}"
+		],
+		"description": "A basic class with default constructor"
+	}
+}

@@ -137,7 +137,7 @@
 		"body": [
 			"(function() {",
 			"	\"use strict\";",
-			"	angular.module(\"$1\", [$2])",
+			"	angular.module(\"$1\", [$2]);",
 			"	$3",
 			"})();"		
 		],
